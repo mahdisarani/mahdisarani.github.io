@@ -13,7 +13,7 @@ Member of the Persian WordPress community.
 ## Work Experience
 - **Founder** of **Mashhad Code (Kerooshe)** since 2015
 - **PHP Developer** at **PayPing** (2018 - 2023)
-- **PHP Developer** at **Zifay** (2023 - 2024)
+- **PHP Developer** at **Zify** (2023 - 2024)
 
 ## Education
 - **Bachelor of Computer Science**
