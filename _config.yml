@@ -1,12 +1,3 @@
 title: Mahdi Sarani's Resume
-logo: /assets/img/logo.png
-email: mahdasarani1995@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  A web developer and WordPress specialist with over 10 years of experience.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://mahdisarani.github.io" # the base hostname & protocol for your site
-show_downloads: true
-theme: jekyll-theme-minimal
-
-# Build settings
-markdown: kramdown
+description: Web developer and WordPress specialist with over 10 years of experience.
+url: "https://mahdisarani.ir"
