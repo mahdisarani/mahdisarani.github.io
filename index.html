@@ -95,6 +95,25 @@
   }
   .entry p { color: var(--muted); margin-top: 4px; font-size: 0.95rem; }
 
+  /* ---- projects ---- */
+  .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 14px; }
+  .project-card {
+    display: block; background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 18px 20px; text-decoration: none; color: var(--text);
+    transition: transform .15s ease, border-color .15s ease;
+  }
+  .project-card:hover { transform: translateY(-3px); border-color: var(--accent); }
+  .project-card h3 {
+    font-size: 1rem; display: flex; align-items: center;
+    justify-content: space-between; gap: 8px;
+  }
+  .project-card .tag {
+    font-size: .72rem; font-weight: 600; white-space: nowrap;
+    color: var(--accent); background: var(--accent-soft);
+    border-radius: 999px; padding: 2px 10px;
+  }
+  .project-card p { color: var(--muted); font-size: .92rem; margin-top: 6px; }
+
   /* ---- skills ---- */
   .skills { display: flex; flex-wrap: wrap; gap: 10px; }
   .skill {
@@ -188,6 +207,28 @@
         <h3>PHP Developer · <span class="org">Zify</span></h3>
         <p>PHP development across product features and integrations.</p>
       </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="projects">
+      <a class="project-card" href="https://toranji.ir" target="_blank" rel="noopener">
+        <h3>Toranji <span class="tag">Media · WordPress</span></h3>
+        <p>Persian technology news website — a high-traffic WordPress publication covering the tech industry.</p>
+      </a>
+      <a class="project-card" href="https://arsesbeauty.com" target="_blank" rel="noopener">
+        <h3>Arses Beauty <span class="tag">E-commerce · WooCommerce</span></h3>
+        <p>Cosmetics online store with Digikala integration and eNamad trust certification.</p>
+      </a>
+      <a class="project-card" href="https://github.com/PayPing" target="_blank" rel="noopener">
+        <h3>PayPing Gateway Plugins <span class="tag">Fintech · Open source</span></h3>
+        <p>Payment gateway integrations for WordPress, WHMCS, Joomla, OpenCart, PrestaShop, Laravel and more.</p>
+      </a>
+      <a class="project-card" href="https://github.com/mahdisarani/laravel-payping" target="_blank" rel="noopener">
+        <h3>laravel-payping <span class="tag">Laravel package</span></h3>
+        <p>Laravel package for the PayPing payment gateway API.</p>
+      </a>
     </div>
   </section>
 
