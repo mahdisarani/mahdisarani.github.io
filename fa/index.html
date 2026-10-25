@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مهدی سارانی — توسعه‌دهنده PHP و وردپرس</title>
+<meta name="description" content="توسعه‌دهنده وب و متخصص وردپرس با بیش از یک دهه تجربه. مشهد، ایران.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231f6feb'/%3E%3Ctext x='50' y='70' font-size='58' font-family='Arial,sans-serif' font-weight='bold' text-anchor='middle' fill='%23fff'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="alternate" hreflang="fa" href="https://mahdisarani.ir/fa/">
+<link rel="alternate" hreflang="en" href="https://mahdisarani.ir">
+<meta property="og:type" content="website">
+<meta property="og:title" content="مهدی سارانی — توسعه‌دهنده PHP و وردپرس">
+<meta property="og:description" content="توسعه‌دهنده وب و متخصص وردپرس با بیش از یک دهه تجربه. مشهد، ایران.">
+<meta property="og:url" content="https://mahdisarani.ir/fa/">
+<meta name="twitter:card" content="summary">
+<style>
+  :root {
+    --bg: #f6f8fa;
+    --card: #ffffff;
+    --text: #1f2328;
+    --muted: #59636e;
+    --accent: #1f6feb;
+    --accent-soft: #ddf4ff;
+    --border: #d1d9e0;
+    --chip: #eff2f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1117;
+      --card: #151b23;
+      --text: #f0f6fc;
+      --muted: #9198a1;
+      --accent: #4493f8;
+      --accent-soft: #121d2f;
+      --border: #3d444d;
+      --chip: #212934;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Vazirmatn", Tahoma, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.9;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px 64px; position: relative; }
+
+  .lang-switch { position: absolute; top: 24px; left: 0; }
+  .lang-switch a {
+    color: var(--muted); text-decoration: none; font-size: .88rem;
+    border: 1px solid var(--border); border-radius: 999px; padding: 4px 14px;
+    transition: border-color .15s ease, color .15s ease;
+  }
+  .lang-switch a:hover { color: var(--accent); border-color: var(--accent); }
+
+  header { padding: 72px 0 40px; text-align: center; }
+  h1 { font-size: 2.5rem; font-weight: 800; }
+  .role { margin-top: 6px; font-size: 1.15rem; font-weight: 600; color: var(--accent); }
+  .tagline { margin-top: 14px; color: var(--muted); max-width: 640px; margin-inline: auto; }
+  .meta { margin-top: 18px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .chip {
+    background: var(--chip); border: 1px solid var(--border);
+    padding: 4px 14px; border-radius: 999px; font-size: .88rem; color: var(--muted);
+  }
+
+  .contact { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 26px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 9px 18px; text-decoration: none; color: var(--text);
+    font-size: .93rem; font-weight: 500;
+    transition: transform .15s ease, border-color .15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); border-color: var(--accent); }
+  .btn svg { width: 17px; height: 17px; fill: var(--accent); flex-shrink: 0; }
+
+  section { margin-top: 56px; }
+  h2 { font-size: 1.25rem; display: flex; align-items: center; gap: 10px; margin-bottom: 22px; }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+
+  .timeline { position: relative; padding-right: 26px; }
+  .timeline::before {
+    content: ""; position: absolute; right: 7px; top: 6px; bottom: 6px;
+    width: 2px; background: var(--border); border-radius: 2px;
+  }
+  .entry { position: relative; padding-bottom: 28px; }
+  .entry:last-child { padding-bottom: 0; }
+  .entry::before {
+    content: ""; position: absolute; right: -26px; top: 9px;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--accent); border: 3px solid var(--bg);
+    box-shadow: 0 0 0 1px var(--border);
+  }
+  .entry h3 { font-size: 1.05rem; }
+  .entry .org { color: var(--accent); font-weight: 600; }
+  .entry .when {
+    float: left; font-size: .85rem; color: var(--muted);
+    background: var(--chip); border-radius: 999px; padding: 2px 12px;
+  }
+  .entry p { color: var(--muted); margin-top: 4px; font-size: .95rem; }
+
+  .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+  .project-card {
+    display: block; background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 18px 20px; text-decoration: none; color: var(--text);
+    transition: transform .15s ease, border-color .15s ease;
+  }
+  .project-card:hover { transform: translateY(-3px); border-color: var(--accent); }
+  .project-card h3 { font-size: 1rem; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .project-card .tag {
+    font-size: .72rem; font-weight: 600; white-space: nowrap;
+    color: var(--accent); background: var(--accent-soft);
+    border-radius: 999px; padding: 2px 10px;
+  }
+  .project-card p { color: var(--muted); font-size: .92rem; margin-top: 6px; }
+
+  .skills { display: flex; flex-wrap: wrap; gap: 10px; }
+  .skill {
+    background: var(--accent-soft); color: var(--accent);
+    font-weight: 600; font-size: .92rem;
+    padding: 7px 16px; border-radius: 10px;
+    transition: transform .15s ease;
+  }
+  .skill:hover { transform: translateY(-2px); }
+
+  .panel {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 22px 26px;
+  }
+  .panel p { color: var(--muted); }
+
+  footer {
+    margin-top: 72px; padding-top: 24px; border-top: 1px solid var(--border);
+    text-align: center; color: var(--muted); font-size: .88rem;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 560px) {
+    h1 { font-size: 2rem; }
+    header { padding-top: 56px; }
+    .entry .when { float: none; display: inline-block; margin-top: 6px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="lang-switch"><a href="/">English</a></div>
+
+  <header>
+    <h1>مهدی سارانی</h1>
+    <div class="role">توسعه‌دهنده PHP و وردپرس</div>
+    <p class="tagline">
+      توسعه‌دهنده وب و متخصص وردپرس با بیش از یک دهه تجربه —
+      پیاده‌سازی قالب‌ها، افزونه‌ها و درگاه‌های پرداخت با معماری تمیز و قابل استفاده مجدد.
+    </p>
+    <div class="meta">
+      <span class="chip">📍 مشهد، ایران</span>
+      <span class="chip">💼 بنیان‌گذار کروشه</span>
+      <span class="chip">🗓 بیش از ۱۰ سال تجربه</span>
+    </div>
+    <div class="contact">
+      <a class="btn" href="tel:+989368615760">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        تماس
+      </a>
+      <a class="btn" href="https://www.linkedin.com/in/mahdisarani/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146Zm4.943 12.248V6.169H2.542v7.225h2.401Zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016Zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4Z"/></svg>
+        لینکدین
+      </a>
+      <a class="btn" href="https://github.com/mahdisarani" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        گیت‌هاب
+      </a>
+      <a class="btn" href="https://keroshe.com" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0Z"/></svg>
+        کروشه
+      </a>
+    </div>
+  </header>
+
+  <section>
+    <h2>درباره من</h2>
+    <div class="panel">
+      <p>
+        توسعه‌دهنده وب و متخصص وردپرس با بیش از یک دهه تجربه؛ برگزارکننده وردپرس میتاپ مشهد
+        و عضو جامعه وردپرس ایران. بنیان‌گذار کروشه — جایی که پروژه‌های وب را از ایده تا استقرار پیش می‌برم.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>سابقه کاری</h2>
+    <div class="timeline">
+      <div class="entry">
+        <span class="when">۱۳۹۴ — اکنون</span>
+        <h3>بنیان‌گذار · <span class="org">کروشه</span></h3>
+        <p>راه‌اندازی و هدایت استودیو توسعه وب؛ مدیریت پروژه‌های وردپرسی از معماری تا استقرار.</p>
+      </div>
+      <div class="entry">
+        <span class="when">۱۳۹۷ — ۱۴۰۲</span>
+        <h3>توسعه‌دهنده PHP · <span class="org">پی‌پینگ</span></h3>
+        <p>توسعه بک‌اند پلتفرم پرداخت آنلاین پی‌پینگ — با بار سنگین تراکنش روی MySQL — و پیاده‌سازی پکیج رسمی لاراول.</p>
+      </div>
+      <div class="entry">
+        <span class="when">۱۴۰۲ — ۱۴۰۳</span>
+        <h3>توسعه‌دهنده PHP · <span class="org">زیفی</span></h3>
+        <p>توسعه ویژگی‌های محصول و یکپارچه‌سازی‌ها.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>پروژه‌ها</h2>
+    <p style="color: var(--muted); font-size: .93rem; margin: -10px 0 18px;">
+      پروژه‌های مشتریان و محصولات — عرضه‌شده از طریق
+      <a href="https://keroshe.com" style="color: var(--accent); text-decoration: none;">کروشه</a>،
+      جایی که بنیان‌گذار و توسعه‌دهنده ارشد هستم.
+    </p>
+    <div class="projects">
+      <a class="project-card" href="https://toranji.ir" target="_blank" rel="noopener">
+        <h3>ترنجی <span class="tag">رسانه · وردپرس</span></h3>
+        <p>توسعه و نگهداری سایت خبری وردپرسی پربازدید — کارایی، ارتقا و پایداری.</p>
+      </a>
+      <a class="project-card" href="https://arsesbeauty.com" target="_blank" rel="noopener">
+        <h3>آرسس بیوتی <span class="tag">فروشگاه · ووکامرس</span></h3>
+        <p>پیاده‌سازی کامل فروشگاه ووکامرس — توسعه قالب، فرایند پرداخت و ارسال، یکپارچه‌سازی‌های ثالث.</p>
+      </a>
+      <a class="project-card" href="https://github.com/PayPing" target="_blank" rel="noopener">
+        <h3>افزونه‌های درگاه پی‌پینگ <span class="tag">فین‌تک · متن‌باز</span></h3>
+        <p>طراحی، توسعه و نگهداری افزونه‌های درگاه پرداخت PHP برای وردپرس، WHMCS، جوملا، اپن‌کارت، پرستاشاپ و لاراول — درگاه ووکامرس با بیش از ۱٬۰۰۰ نصب فعال در WordPress.org.</p>
+      </a>
+      <a class="project-card" href="https://sanjeshparsian.ir" target="_blank" rel="noopener">
+        <h3>سنجش پارسیان <span class="tag">آموزشی · وردپرس</span></h3>
+        <p>توسعه اختصاصی وردپرس و ووکامرس — CPTهای سفارشی برای دوره‌ها، ثبت‌نام آنلاین و فروشگاه کتاب؛ همراه با نگهداری.</p>
+      </a>
+      <a class="project-card" href="https://sanathonar-tvto.com" target="_blank" rel="noopener">
+        <h3>صنعت و هنر <span class="tag">آموزشی · ووکامرس</span></h3>
+        <p>توسعه اختصاصی ووکامرس و CPT برای سایت آموزشگاه فنی‌وحرفه‌ای وابسته به TVTO؛ به‌همراه نگهداری بلندمدت.</p>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>مهارت‌ها</h2>
+    <div class="skills">
+      <span class="skill">PHP</span>
+      <span class="skill">وردپرس</span>
+      <span class="skill">لاراول</span>
+      <span class="skill">MySQL</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">jQuery</span>
+      <span class="skill">Bootstrap</span>
+      <span class="skill">Tailwind CSS</span>
+      <span class="skill">HTML</span>
+      <span class="skill">CSS</span>
+      <span class="skill">Docker</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>تحصیلات</h2>
+    <div class="panel">
+      <p><strong>کارشناسی مهندسی کامپیوتر</strong></p>
+    </div>
+  </section>
+
+  <footer>
+    © ۱۴۰۵ مهدی سارانی · <a href="https://github.com/mahdisarani">github.com/mahdisarani</a>
+  </footer>
+
+</div>
+</body>
+</html>
